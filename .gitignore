@@ -1,0 +1,9 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.pyc
+mlruns/
+mlflow.db*
+dvc-storage/
+reproduction-clone/
+*.log

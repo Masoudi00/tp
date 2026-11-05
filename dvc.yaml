@@ -1,0 +1,16 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - data/raw/iris.csv
+      - requirements.lock.txt
+    params:
+      - train
+      - knn
+    outs:
+      - models/random_forest.pkl
+      - models/knn.pkl
+    metrics:
+      - reports/metrics.json:
+          cache: false
