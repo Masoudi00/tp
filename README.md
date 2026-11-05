@@ -36,6 +36,8 @@ Augmenter le nombre d’arbres et la profondeur n’a pas amélioré ce test. Le
 
 Les valeurs complètes sont conservées dans reports/baseline.json et reports/metrics.json. La base SQLite et les artefacts MLflow restent locaux et ne sont pas stockés dans Git.
 
+Captures de l’interface MLflow : [liste des quatre runs](reports/mlflow-experiments.png) et [paramètres et métriques du second Random Forest](reports/mlflow-random-forest.png).
+
 ## Restaurer et reproduire
 
 ```powershell
@@ -68,5 +70,7 @@ Les datasets publics intégrés à scikit-learn permettent aussi une reproductio
 ## CI et références
 
 La GitHub Action installe les dépendances fixées, génère les deux datasets, vérifie leurs empreintes DVC, force le pipeline, recharge les modèles et contrôle les métriques ainsi qu’un seuil d’accuracy de 0.85. Les sorties sont publiées comme artefact du job. Aucun secret cloud n’est nécessaire pour ces données publiques.
+
+La première [exécution GitHub Actions sur Ubuntu](https://github.com/Masoudi00/tp/actions/runs/42068352711) a réussi le 5 novembre 2026. Elle vérifie l’installation et le réentraînement dans un environnement distinct de la machine Windows de développement.
 
 Documentation officielle : [DVC repro](https://doc.dvc.org/command-reference/repro), [DVC checkout](https://doc.dvc.org/command-reference/checkout), [MLflow tracking](https://mlflow.org/docs/latest/tracking/).
