@@ -7,7 +7,7 @@ import subprocess
 import sys
 
 root = Path(__file__).resolve().parents[1]
-clone = root / "reproduction-clone"
+clone = root / (sys.argv[1] if len(sys.argv) > 1 else "reproduction-clone")
 if clone.exists():
     raise SystemExit("reproduction-clone already exists; use a fresh destination")
 env = os.environ.copy()
@@ -38,7 +38,7 @@ assert modified != original == restored
 run("dvc", "repro", "--force", "--no-run-cache")
 reproduced = json.loads((clone / "reports/metrics.json").read_text())
 assert reproduced == baseline
-run("python", "scripts/validate.py")
+run(sys.executable, "scripts/validate.py")
 status = run("dvc", "status")
 report = {"environment": "Separate clone and empty DVC cache; same Python environment and machine",
           "tag": "v1.0", "wine_original_sha256": original,

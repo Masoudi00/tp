@@ -5,5 +5,5 @@ __pycache__/
 mlruns/
 mlflow.db*
 dvc-storage/
-reproduction-clone/
+reproduction-clone*/
 *.log

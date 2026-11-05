@@ -1,0 +1,24 @@
+{
+  "environment": "Separate clone and empty DVC cache; same Python environment and machine",
+  "tag": "v1.0",
+  "wine_original_sha256": "cd80158fad3d1e203d61dae42242620b02dd5f918e637b5f08381e39e7cf5204",
+  "wine_modified_sha256": "be35d8244a3f6f153e3ea881eb7d2f55101b62c23d2dcd9d6f1db74f2fbe7056",
+  "wine_restored_sha256": "cd80158fad3d1e203d61dae42242620b02dd5f918e637b5f08381e39e7cf5204",
+  "data_restoration_passed": true,
+  "forced_training_metrics_equal": true,
+  "baseline_metrics": {
+    "random_forest": {
+      "accuracy": 0.9333333333333333,
+      "precision": 0.9333333333333333,
+      "recall": 0.9333333333333333,
+      "f1_score": 0.9333333333333333
+    },
+    "knn": {
+      "accuracy": 0.9333333333333333,
+      "precision": 0.9444444444444445,
+      "recall": 0.9333333333333333,
+      "f1_score": 0.9326599326599326
+    }
+  },
+  "dvc_status": "Data and pipelines are up to date."
+}
