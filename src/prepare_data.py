@@ -9,7 +9,7 @@ def main():
     for name, loader in (("iris", load_iris), ("wine", load_wine)):
         frame = loader(as_frame=True).frame
         assert not frame.isna().any().any()
-        frame.to_csv(output / f"{name}.csv", index=False)
+        frame.to_csv(output / f"{name}.csv", index=False, lineterminator="\n")
         print(f"{name}: {len(frame)} observations, {frame.shape[1]-1} variables")
 
 if __name__ == "__main__":
