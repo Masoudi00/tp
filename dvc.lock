@@ -21,8 +21,8 @@ stages:
           n_neighbors: 5
           weights: uniform
         train:
-          n_estimators: 100
-          max_depth: 5
+          n_estimators: 200
+          max_depth: 8
           random_state: 42
           test_size: 0.2
     outs:
@@ -32,9 +32,9 @@ stages:
       size: 12224
     - path: models/random_forest.pkl
       hash: md5
-      md5: 35a0e121e7469f2453378c88f63aaf82
-      size: 163473
+      md5: 4127095bcffac104523261cdfffa722e
+      size: 336449
     - path: reports/metrics.json
       hash: md5
-      md5: 10d34738e8342428bb87cfa253b3cebd
-      size: 343
+      md5: 3f63f1b28acb3407b274d0d277989411
+      size: 313
